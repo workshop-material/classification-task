@@ -53,7 +53,14 @@ def main(
     # create a new column "correct" where column label matches column prediction
     data["correct"] = data["label"] == data["prediction"]
 
-    chart1 = scatter_plot(data, "Are predictions correct?", "correct", "set1")
+    # number of rows where correct is True
+    num_correct = data["correct"].sum()
+    accuracy = num_correct / len(data)
+    print(f"Accuracy: {accuracy}")
+
+    chart1 = scatter_plot(
+        data, f"Are predictions correct? (accuracy: {accuracy})", "correct", "set1"
+    )
 
     data = pd.read_csv(training_data)
 
