@@ -1,0 +1,8 @@
+name: classification-task
+channels:
+  - conda-forge
+dependencies:
+  - python <= 3.12
+  - click
+  - numpy
+  - pandas
