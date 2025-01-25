@@ -1,4 +1,4 @@
-# classification-task
+# 2D classification task using a nearest-neighbor predictor
 
 Little example project we use in teaching.
 
