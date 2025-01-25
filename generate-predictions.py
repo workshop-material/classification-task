@@ -64,6 +64,7 @@ def main(num_neighbors, training_data, test_data, predictions):
     df_test["prediction"] = nearest_neighbor_predictor(df_train, df_test, num_neighbors)
 
     df_test.to_csv(predictions, index=False)
+    print(f"Predictions saved to {predictions}")
 
 
 if __name__ == "__main__":
