@@ -7,7 +7,7 @@ This is part of https://coderefinery.github.io/reproducible-python-ml/.
 
 ## Example chart
 
-![Example plot](example-chart/chart.svg)
+![Example chart](reference/chart.svg)
 
 
 ## Purpose
