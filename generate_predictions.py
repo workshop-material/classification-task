@@ -14,6 +14,9 @@ def get_nearest_labels(row, labels, num_neighbors):
 
 
 def nearest_neighbor_predictor(df_train, df_test, num_neighbors):
+
+    if num_neighbors % 2 != 0: raise TypeError('num_neighbors must be odd.')
+
     test_positions = df_test[["x", "y"]].values
     train_positions = df_train[["x", "y"]].values
     train_labels = df_train["label"].values
