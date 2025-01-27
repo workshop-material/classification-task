@@ -12,7 +12,8 @@ This is part of https://coderefinery.github.io/reproducible-python-ml/.
 
 ## Purpose
 
-This is to learn this thing.
+
+This is to learn more about collaborative coding.
 
 
 ## Requirements
