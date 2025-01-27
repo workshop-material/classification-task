@@ -12,7 +12,6 @@ def get_nearest_labels(row, labels, num_neighbors):
             return nearest_labels
 
 
-
 def get_majority_label(nearest_labels):
     """Provides the majority label from a list of nearest labels.
 
