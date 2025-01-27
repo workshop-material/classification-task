@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 from scipy.spatial.distance import cdist
-
+#the first commit comment
 
 def get_nearest_labels(row, labels, num_neighbors):
     nearest_labels = []
