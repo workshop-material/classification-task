@@ -1,7 +1,6 @@
 import click
 import numpy as np
 import pandas as pd
-
 from scipy.spatial.distance import cdist
 
 
@@ -11,6 +10,10 @@ def get_nearest_labels(row, labels, num_neighbors):
         nearest_labels.append(label)
         if len(nearest_labels) == num_neighbors:
             return nearest_labels
+
+
+def majority_vote(nearest_labels):
+    return np.bincount(nearest_labels).argmax()
 
 
 def nearest_neighbor_predictor(df_train, df_test, num_neighbors):
@@ -25,7 +28,7 @@ def nearest_neighbor_predictor(df_train, df_test, num_neighbors):
         nearest_labels = get_nearest_labels(row, train_labels, num_neighbors)
 
         # this finds the most common nearest label by majority vote
-        majority_index = np.bincount(nearest_labels).argmax()
+        majority_index = majority_vote(nearest_labels)
         predictions.append(majority_index)
 
     return predictions
