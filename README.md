@@ -12,7 +12,8 @@ This is part of https://coderefinery.github.io/reproducible-python-ml/.
 
 ## Purpose
 
-(...)
+
+This is to learn more about collaborative coding.
 
 
 ## Requirements
@@ -22,12 +23,17 @@ This is part of https://coderefinery.github.io/reproducible-python-ml/.
 
 ## Installation instructions
 
-(...)
+```sh
+conda create -n somename --file=environment.yml
+conda activate somename
+```
 
 
 ## Example
 
-(copy-paste-able example)
+```sh 
+python generate_data.py --help
+```
 
 
 ## Documentation

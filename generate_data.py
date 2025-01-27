@@ -53,12 +53,18 @@ def generate_data(rng, num_samples):
     required=True,
     help="Test data is written to this file.",
 )
-def main(num_samples, training_data, test_data):
+@click.option(
+    "--seed",
+    type=int,
+    default=42,
+    help="Seed for the random number generator.",
+)
+def main(num_samples, training_data, test_data, seed):
     """
     Program that generates a set of training and test samples for a non-linear classification task.
     """
 
-    rng = np.random.default_rng(seed=42)
+    rng = np.random.default_rng(seed=seed)
 
     for output_file in [training_data, test_data]:
         data = generate_data(rng, num_samples)
