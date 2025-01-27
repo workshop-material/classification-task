@@ -58,7 +58,7 @@ def main(num_neighbors, training_data, test_data, predictions):
     """
     Creates predictions on test data with a nearest neighbor classifier.
     """
-    if num_neighbors % 2 != 0:
+    if num_neighbors % 2 == 0:
         sys.exit("number of errors has to be uneven!")
 
 
