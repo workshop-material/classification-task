@@ -7,7 +7,13 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 extensions = [
     "myst_parser",  # in order to use markdown
+    "autoapi.extension",  # in order to use autoapi
 ]
+
+autoapi_dirs = [".."]
+
+# ignore this file when generating API documentation
+autoapi_ignore = ["doc/conf.py"]
 
 myst_enable_extensions = [
     "colon_fence",  # ::: can be used instead of ``` for better rendering
