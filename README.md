@@ -12,7 +12,7 @@ This is part of https://coderefinery.github.io/reproducible-python-ml/.
 
 ## Purpose
 
-This is to learn this thang.
+This is to learn this thing.
 
 
 ## Requirements
