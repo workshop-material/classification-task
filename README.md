@@ -1,3 +1,6 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/workshop-material/classification-task/HEAD)
+
+
 # 2D classification task using a nearest-neighbor predictor
 
 Little example project we use in teaching.
