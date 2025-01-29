@@ -13,6 +13,8 @@ dependencies:
   - sphinx
   - sphinx-rtd-theme
   - sphinx-autoapi
-  - snakemake
   - pytest
+  - pip
+  pip:
+    - snakemake
 
