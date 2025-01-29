@@ -32,8 +32,8 @@ def nearest_neighbor_predictor(df_train, df_test, num_neighbors):
         nearest_labels = get_nearest_labels(row, train_labels, num_neighbors)
 
         # this finds the most common nearest label by majority vote
-        majority_index = majority_index(nearest_labels)
-        predictions.append(majority_index)
+        major_index = majority_index(nearest_labels)
+        predictions.append(major_index)
 
     return predictions
 

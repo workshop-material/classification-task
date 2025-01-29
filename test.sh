@@ -2,6 +2,7 @@
 
 # create the data directory if it does not exist
 echo "Creating data directory"
+pwd 
 mkdir -p data
 echo "Created data directory"
 
