@@ -2,6 +2,7 @@
 Here we describe what the module does ...
 """
 
+__version__ = "0.2.0"
 
 import click
 import numpy as np
