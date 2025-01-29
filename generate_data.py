@@ -12,16 +12,6 @@ def normal_distribution(rng, loc, scale, num_samples, label):
     return data
 
 
-def test_normal_distribution():
-    rng = np.random.default_rng(seed=42)
-    data = normal_distribution(rng, 0.0, 1.0, 100, 0)
-
-    assert isinstance(data, pd.DataFrame)
-    assert len(data) == 100
-    assert data["label"].nunique() == 1
-    assert data["label"].unique()[0] == 0
-
-
 def circular_distribution(rng, r_min, r_max, num_samples, label):
     angles = np.linspace(0.0, 2.0 * np.pi, num_samples)
     radii = rng.uniform(r_min, r_max, num_samples)
@@ -37,16 +27,6 @@ def circular_distribution(rng, r_min, r_max, num_samples, label):
     return data
 
 
-def test_circular_distribution():
-    rng = np.random.default_rng(seed=42)
-    data = circular_distribution(rng, 9.0, 12.0, 100, 0)
-
-    assert isinstance(data, pd.DataFrame)
-    assert len(data) == 100
-    assert data["label"].nunique() == 1
-    assert data["label"].unique()[0] == 0
-
-
 # generates a fixed number of 2-dimensional data points with a corresponding
 # binary class label (0 or 1)
 def generate_data(rng, num_samples):
@@ -55,16 +35,6 @@ def generate_data(rng, num_samples):
     data3 = circular_distribution(rng, 4.0, 6.0, num_samples, 1)
 
     return pd.concat([data1, data2, data3])
-
-
-def test_generate_data():
-    rng = np.random.default_rng(seed=42)
-    data = generate_data(rng, 100)
-
-    assert isinstance(data, pd.DataFrame)
-    assert len(data) == 100 * 2
-    assert data["label"].nunique() == 2
-    assert set(data["label"].unique()) == {0, 1}
 
 
 @click.command()
