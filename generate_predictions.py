@@ -14,6 +14,12 @@ def get_nearest_labels(row, labels, num_neighbors):
             return nearest_labels
 
 
+def get_maj_ind(index_list) -> int:
+    return np.bincount(index_list).argmax()
+
+def test_get_maj_ind():
+    assert get_maj_ind([0,1,0,1,1,1,0,1]) == 1
+
 def nearest_neighbor_predictor(df_train, df_test, num_neighbors):
     test_positions = df_test[["x", "y"]].values
     train_positions = df_train[["x", "y"]].values
@@ -26,7 +32,7 @@ def nearest_neighbor_predictor(df_train, df_test, num_neighbors):
         nearest_labels = get_nearest_labels(row, train_labels, num_neighbors)
 
         # this finds the most common nearest label by majority vote
-        majority_index = np.bincount(nearest_labels).argmax()
+        majority_index = get_maj_ind(nearest_labels)
         predictions.append(majority_index)
 
     return predictions
