@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 # create the data directory if it does not exist
+echo "Creating data directory"
 mkdir -p data
+echo "Created data directory"
 
 python generate_data.py \
         --num-samples 50 \
