@@ -1,3 +1,8 @@
+"""
+Here we describe what the module does ...
+"""
+
+
 import click
 import numpy as np
 import pandas as pd
