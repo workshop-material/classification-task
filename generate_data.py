@@ -2,6 +2,7 @@ import click
 import numpy as np
 import pandas as pd
 
+# Added a new useful comment
 
 def normal_distribution(rng, loc, scale, num_samples, label):
     xs = rng.normal(loc, scale, num_samples)
